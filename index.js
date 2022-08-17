@@ -46,7 +46,7 @@ app.use('/api/auth', authRoutes)
 app.use('/api/videos', videosRoutes)
 app.use('/api/comments', commentsRoutes)
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   connect()
-  console.log('Server running at http://localhost:5000')
+  console.log('Server running at port ' + process.env.PORT)
 })
